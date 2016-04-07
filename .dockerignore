@@ -1,0 +1,10 @@
+tmp/*
+log/*
+test
+spec
+.git
+.gitignore
+README.md
+
+#Rubymine
+.idea

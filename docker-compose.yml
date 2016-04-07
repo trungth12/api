@@ -1,0 +1,22 @@
+version: "2"
+services:
+  rb:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/hpu
+    links:
+      - db
+    # This tells the api container to mount 'gems' folder from 'bundle' image
+    # to api containers /gems path
+    volumes_from:
+      - bundle
+
+  db:
+    image: postgres
+
+  bundle:
+    image: busybox
+    volumes:
+      - /gems

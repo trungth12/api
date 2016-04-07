@@ -1,0 +1,31 @@
+hiep:
+  first_name: Hiep
+  last_name: Nguyen
+  email: h.nguyen@example.com
+  password_digest: <%= User.digest('password') %>
+
+jack:
+  first_name: Jack
+  last_name: Nguyen
+  email: jack@example.gov
+  password_digest: <%= User.digest('password') %>
+  
+nguyen:
+  first_name: Kevin 
+  last_name: Nguyen
+  email: test@example.gov
+  password_digest: <%= User.digest('password') %>
+
+john:
+  first_name: John 
+  last_name: Doe
+  email: register@example.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  first_name:  <%= "First #{n}" %>
+  last_name: <%= "Last #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
