@@ -1,10 +1,9 @@
+require 'auth'
 class RootController < ApplicationController
   include Pundit
   include Auth
 
   after_action :verify_authorized
-
-  protect_from_forgery with: :null_session
 
   if Rails.env.production?
     rescue_from Exception, with: :render_500
