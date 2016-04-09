@@ -1,18 +1,50 @@
 ## README
 
-INITIAL SET UP
+### INITIAL SET UP
+
+*INSTALLATION ON MACOSX*
+
+```
 brew update
 brew install docker
 brew install docker-compose
 brew install docker-machine
+```
 
-DEVELOPMENT ENVIRONMENT
-git clone api folder
+*INSTALLATION ON WINDOWS*
 
+- Install `DockerToolbox`
+
+*DEVELOPMENT ENVIRONMENT*
+
+```
 docker-machine start
 docker-machine env
 docker-compose up -d
+```
 
+*CREATE DB*
 
-Create DB
-docker exect -it api_db rake db:create
+- Config database in `config/database.yml`
+- Run command
+```
+docker-compose run rb1 bin/rake db:create
+docker-compose run rb1 bin/rake db:migrate
+```
+
+*RUN TEST*
+
+```
+docker-compose run rb1 bin/rails test
+```
+
+### Contributing guidelines
+
+- Clone project
+- Pull from `origin/master`
+- Checkout new feature
+- Commit and send pull request
+
+### LICENSE
+
+[GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html)
