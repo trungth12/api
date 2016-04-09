@@ -36,9 +36,3 @@ docker-compose run rb1 bin/rake db:migrate
 docker-compose run rb1 bin/rails test
 ```
 
-### Contributing guidelines
-
-- Clone project
-- Pull from `origin/master`
-- Checkout new feature
-- Commit and send pull request

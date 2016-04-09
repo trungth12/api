@@ -1,6 +1,7 @@
 ## Guide
 
 - [Installation](docs/INSTALLATION.md)
+- [Contributing Guideline](docs/CONTRIBUTING.md)
 
 ## LICENSE
 
